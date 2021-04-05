@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckLogin
+class CheckRole
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class CheckLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->query('role') === 'admin'){
+        if($request->query('role')==='admin'){
             return $next($request);
         }
     
