@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\SonController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Bai5Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +26,8 @@ Route::post('/Demo',[DemoController::class,'store'])->name('post.store');
 Route::get('/login', function () 
 {return view('login');
 })->name('login');
+Route::get('/homes',[HomeController::class,'index']);
+Route::get('/porfile', function () 
+{return view('profile');
+});
+Route::get('/bai5',[Bai5Controller::class,'index']);
