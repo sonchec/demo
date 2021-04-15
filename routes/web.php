@@ -18,7 +18,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // $user = new User([
+    //     'name' => 'tuan',
+    //     'email'=>'ngotuan@gmail.com',
+    //     'password'=> Hash::make('5555'),
+    //  ]);
+    //  $user->save();
+    // them
+
+    // $user = User::query()->find(3);
+// $user->delete();
+//xoa
+
+    //    User::query()->find(1)->update(['email'=>'sonson@gmail.com']);
+//sua
+
+    // return view('welcome');
 });
 Route::get('/home',[SonController::class, 'index']);
 Route::get('/Demo',[DemoController::class,'create'])->middleware('login')->name('post.create');
