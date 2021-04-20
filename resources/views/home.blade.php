@@ -1,8 +1,5 @@
-@extends('layouts.app')
+@extends('layout.app')
 @section('content')
-@if($name)
-   <h1>{{$name}}</h1>
-   @endif
 <div class="container" style="margin-top:30px">
     <div class="row">
       <div class="col-sm-4">
